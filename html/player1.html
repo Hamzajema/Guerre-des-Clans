@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Créer Joueur 1</title>
+  <link rel="stylesheet" href="../css/player1.css">
+</head>
+<body>
+
+<div id="player1-screen" class="screen">
+  <div class="overlay"></div>
+  <div class="content">
+    <h2>Joueur 1 : Choisissez votre Clan</h2>
+    
+    <input type="text" id="player1-name" placeholder="Entrez votre nom..." />
+
+    <div class="clan-selection">
+      <div class="clan" id="mountains">
+        <h3>Clan des Montagnes</h3>
+        <div class="units">
+          <div><img src="../assets/images/Guerrier.png" alt="Guerrier" class="unit-icon"> <strong>3 Guerriers</strong></div>
+          <div><img src="../assets/images/Archer.png" alt="Archer" class="unit-icon"> <strong>2 Archers</strong></div>
+          <div><img src="../assets/images/Mage.png" alt="Mage" class="unit-icon"> <strong>1 Mage</strong></div>
+        </div>
+        <p><strong>Avantage :</strong> Défense renforcée</p>
+      </div>
+    
+      <div class="clan" id="plains">
+        <h3>Clan des Plaines</h3>
+        <div class="units">
+          <div><img src="../assets/images/Guerrier.png" alt="Guerrier" class="unit-icon"> <strong>2 Guerriers</strong></div>
+          <div><img src="../assets/images/Archer.png" alt="Archer" class="unit-icon"> <strong>3 Archers</strong></div>
+          <div><img src="../assets/images/Mage.png" alt="Mage" class="unit-icon"> <strong>1 Mage</strong></div>
+        </div>
+        <p><strong>Avantage :</strong> Attaques à distance précises</p>
+      </div>
+    
+      <div class="clan" id="sages">
+        <h3>Clan des Sages</h3>
+        <div class="units">
+          <div><img src="../assets/images/Guerrier.png" alt="Guerrier" class="unit-icon"> <strong>1 Guerrier</strong></div>
+          <div><img src="../assets/images/Archer.png" alt="Archer" class="unit-icon"> <strong>2 Archers</strong></div>
+          <div><img src="../assets/images/Mage.png" alt="Mage" class="unit-icon"> <strong>3 Mages</strong></div>
+        </div>
+        <p><strong>Avantage :</strong> Sorts puissants, mais faible défense</p>
+      </div>
+    </div>
+    
+    
+
+    <button id="next-btn" disabled>Continuer ➔</button>
+  </div>
+</div>
+
+<audio id="click-sound" src="../assets/audios/game-start-317318.mp3" preload="auto"></audio>
+<div id="black-screen"></div>
+
+<script src="../js/player1.js"></script>
+</body>
+</html>

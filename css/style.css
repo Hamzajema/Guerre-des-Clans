@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'MedievalSharp', cursive, sans-serif;
+    overflow: hidden;
+  }
+  
+  .screen {
+    width: 100%;
+    height: 100%;
+    background: url('../assets/images/adv.avif') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 2s ease forwards;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #bc8e06;
+  }
+  
+  button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: white;
+    background: linear-gradient(45deg, #bc8e06, #a1a6c2);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #bc8e06;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #bc8e06;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+
+  #black-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+    z-index: 9999;
+  }
+    /* Game History Modal Styles */
+    .history-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+  
+    .history-content {
+      background-color: #222;
+      color: white;
+      border-radius: 10px;
+      padding: 30px;
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      border: 2px solid #444;
+    }
+  
+    .history-title {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #f9d71c;
+      font-size: 24px;
+    }
+  
+    .close-history-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  
+    .close-history-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  
+    .history-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .history-item {
+      background-color: rgba(255, 255, 255, 0.05);
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 5px;
+      border-left: 4px solid #f9d71c;
+    }
+  
+    .history-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  
+    .history-game-number {
+      font-weight: bold;
+      color: #f9d71c;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+  
+    .history-winner,
+    .history-loser,
+    .history-rounds,
+    .history-date {
+      margin: 5px 0;
+    }
+  
+    /* Game over modal button containers */
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+  
+    .play-again-btn,
+    .history-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+  
+    .play-again-btn {
+      background-color: #4CAF50;
+      color: white;
+    }
+  
+    .play-again-btn:hover {
+      background-color: #3e8e41;
+    }
+  
+    .history-btn {
+      background-color: #3498db;
+      color: white;
+    }
+  
+    .history-btn:hover {
+      background-color: #2980b9;
+    }
+  
+    /* History button in game interface */
+    .game-history-btn {
+      transition: background-color 0.3s;
+    }
+  
+    .game-history-btn:hover {
+      background-color: #666666;
+    }
